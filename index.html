@@ -1,0 +1,1857 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>紫藤家园sp - 社区影像_温暖陪伴的生活视频品牌</title>
+<meta name="description" content="紫藤家园sp官方网站，深耕社区生活方式影像领域，为创作者与家庭用户打造高品质、正版的原创视频内容生态，记录真实温暖的日常。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b3b8c'/%3E%3Ccircle cx='32' cy='24' r='9' fill='%23e6d5f7'/%3E%3Cpath d='M32 36c-10 0-16 6-16 14h32c0-8-6-14-16-14z' fill='%23c9a9e8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --zw-bg:#f7f4fb;
+  --zw-ink:#2b2140;
+  --zw-sub:#6b5f82;
+  --zw-main:#5b3b8c;
+  --zw-main-soft:#7d5bb5;
+  --zw-accent:#e8629c;
+  --zw-accent-soft:#fbe3ef;
+  --zw-mint:#3fae9c;
+  --zw-card:#ffffff;
+  --zw-line:#e5dcf1;
+  --zw-shadow:0 10px 30px rgba(91,59,140,.10);
+  --zw-radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--zw-bg);
+  color:var(--zw-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{line-height:1.35;margin:0;}
+p{margin:0 0 14px;}
+section{scroll-margin-top:118px;}
+
+.zw-container{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 22px;
+}
+.zw-sticky-head{
+  position:sticky;
+  top:0;
+  z-index:120;
+}
+
+/* 公告条 */
+.zw-announce{
+  background:linear-gradient(90deg,#4a2f78,#6b46a8 55%,#8a5cc4);
+  color:#f3ebff;
+  font-size:13px;
+  letter-spacing:.2px;
+}
+.zw-announce-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:9px 22px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.zw-announce-badge{
+  background:var(--zw-accent);
+  color:#fff;
+  border-radius:999px;
+  padding:1px 10px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  flex:none;
+}
+.zw-announce-text{flex:1 1 auto;min-width:200px;}
+.zw-announce a{
+  border-bottom:1px dashed rgba(243,235,255,.6);
+  white-space:nowrap;
+}
+
+/* 页头 */
+.zw-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--zw-line);
+  box-shadow:0 4px 18px rgba(91,59,140,.05);
+}
+.zw-header-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:12px 22px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.zw-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:none;
+}
+.zw-brand-mark{
+  width:42px;height:42px;
+  border-radius:13px;
+  background:linear-gradient(140deg,#5b3b8c,#c9a9e8);
+  display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:18px;
+  box-shadow:0 6px 16px rgba(91,59,140,.3);
+}
+.zw-brand-name{font-size:18px;font-weight:800;letter-spacing:.5px;}
+.zw-brand-name span{color:var(--zw-main);}
+.zw-brand-sub{display:block;font-size:11px;color:var(--zw-sub);letter-spacing:2px;font-weight:500;}
+.zw-nav{
+  flex:1 1 auto;
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.zw-nav a{
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:14px;
+  color:var(--zw-sub);
+  font-weight:600;
+  transition:.2s;
+  white-space:nowrap;
+}
+.zw-nav a:hover{background:var(--zw-accent-soft);color:var(--zw-main);}
+.zw-header-tools{
+  display:flex;align-items:center;gap:10px;flex:none;
+}
+.zw-search{
+  display:flex;align-items:center;
+  background:var(--zw-bg);
+  border:1px solid var(--zw-line);
+  border-radius:999px;
+  padding:4px 6px 4px 14px;
+  transition:.2s;
+}
+.zw-search:focus-within{border-color:var(--zw-main-soft);box-shadow:0 0 0 3px rgba(125,91,181,.15);}
+.zw-search input{
+  border:0;background:transparent;outline:none;
+  font-size:13.5px;width:132px;color:var(--zw-ink);
+  font-family:inherit;
+}
+.zw-search button{
+  border:0;background:var(--zw-main);color:#fff;
+  border-radius:999px;padding:5px 13px;font-size:13px;
+  font-weight:600;
+}
+.zw-burger{
+  display:none;
+  border:1px solid var(--zw-line);
+  background:#fff;border-radius:10px;
+  width:40px;height:38px;
+  font-size:18px;color:var(--zw-main);
+}
+.zw-search-tip{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 22px;
+  font-size:12.5px;
+  color:var(--zw-accent);
+  height:0;
+  overflow:hidden;
+  transition:.25s;
+}
+.zw-search-tip.zw-show{height:26px;padding-top:5px;}
+
+/* 按钮 */
+.zw-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  border-radius:999px;
+  padding:11px 24px;
+  font-size:14.5px;
+  font-weight:700;
+  border:0;
+  transition:.22s;
+}
+.zw-btn-main{background:var(--zw-main);color:#fff;box-shadow:0 8px 22px rgba(91,59,140,.28);}
+.zw-btn-main:hover{background:#4a2f78;transform:translateY(-2px);}
+.zw-btn-ghost{background:#fff;color:var(--zw-main);border:1.5px solid var(--zw-line);}
+.zw-btn-ghost:hover{border-color:var(--zw-main-soft);background:#faf7ff;}
+.zw-btn-accent{background:var(--zw-accent);color:#fff;box-shadow:0 8px 20px rgba(232,98,156,.28);}
+.zw-btn-accent:hover{background:#d44b87;transform:translateY(-2px);}
+.zw-btn-sm{padding:7px 16px;font-size:13px;}
+
+/* 首屏 */
+.zw-hero{
+  padding:54px 0 58px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(201,169,232,.4),transparent 46%),
+    radial-gradient(circle at 88% 6%,rgba(232,98,156,.18),transparent 42%),
+    linear-gradient(160deg,#f9f5ff,#f2ecfa 70%,#efe6f8);
+  border-bottom:1px solid var(--zw-line);
+}
+.zw-hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:46px;
+  align-items:center;
+}
+.zw-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;
+  border:1px solid var(--zw-line);
+  color:var(--zw-main);
+  font-size:12.5px;font-weight:700;
+  border-radius:999px;
+  padding:5px 14px;
+  margin-bottom:16px;
+  box-shadow:0 4px 12px rgba(91,59,140,.07);
+}
+.zw-hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--zw-mint);display:block;}
+.zw-hero h1{
+  font-size:46px;
+  letter-spacing:1px;
+  margin-bottom:14px;
+}
+.zw-hero h1 em{
+  font-style:normal;
+  color:var(--zw-main);
+  background:linear-gradient(90deg,#5b3b8c,#a273d8);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.zw-hero-lead{
+  font-size:16.5px;
+  color:var(--zw-sub);
+  max-width:520px;
+  margin-bottom:20px;
+}
+.zw-hero-intro{
+  font-size:14px;
+  color:var(--zw-sub);
+  background:rgba(255,255,255,.72);
+  border-left:4px solid var(--zw-main-soft);
+  border-radius:0 14px 14px 0;
+  padding:14px 18px;
+  margin-bottom:24px;
+}
+.zw-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.zw-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.zw-stat{
+  background:#fff;
+  border:1px solid var(--zw-line);
+  border-radius:14px;
+  padding:12px 8px;
+  text-align:center;
+}
+.zw-stat b{display:block;font-size:21px;color:var(--zw-main);letter-spacing:.5px;}
+.zw-stat span{font-size:12px;color:var(--zw-sub);}
+.zw-hero-visual{
+  position:relative;
+}
+.zw-hero-cover{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 24px 50px rgba(91,59,140,.24);
+  border:6px solid #fff;
+  position:relative;
+}
+.zw-hero-cover img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;}
+.zw-hero-float{
+  position:absolute;
+  left:-16px;
+  bottom:-18px;
+  background:#fff;
+  border-radius:16px;
+  padding:12px 16px;
+  box-shadow:var(--zw-shadow);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--zw-main);
+}
+.zw-hero-float span{font-weight:400;color:var(--zw-sub);font-size:11.5px;display:block;}
+
+/* 通用分区 */
+.zw-section{padding:58px 0;}
+.zw-section-alt{background:#fff;border-top:1px solid var(--zw-line);border-bottom:1px solid var(--zw-line);}
+.zw-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+.zw-kicker{
+  font-size:12.5px;
+  letter-spacing:3px;
+  font-weight:800;
+  color:var(--zw-accent);
+  text-transform:uppercase;
+  margin-bottom:7px;
+  display:block;
+}
+.zw-section-head h2{
+  font-size:29px;
+  letter-spacing:.5px;
+}
+.zw-section-head p{
+  color:var(--zw-sub);
+  font-size:14px;
+  max-width:560px;
+  margin:8px 0 0;
+}
+.zw-link-more{
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--zw-main);
+  border-bottom:2px solid var(--zw-accent-soft);
+  padding-bottom:2px;
+  white-space:nowrap;
+}
+.zw-link-more:hover{border-color:var(--zw-accent);}
+
+/* 主题解析长文 */
+.zw-story-panel{
+  background:#fff;
+  border-radius:var(--zw-radius);
+  border:1px solid var(--zw-line);
+  padding:32px 34px;
+  box-shadow:var(--zw-shadow);
+}
+.zw-story-panel h2{font-size:27px;margin-bottom:6px;}
+.zw-story-panel h3{font-size:18px;margin:26px 0 8px;color:var(--zw-main);}
+.zw-story-panel h3::before{
+  content:"";display:inline-block;
+  width:8px;height:8px;border-radius:2px;
+  background:var(--zw-accent);
+  margin-right:9px;vertical-align:middle;
+  transform:rotate(45deg);
+}
+.zw-story-panel p{font-size:14.5px;color:#453a5c;}
+.zw-story-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 34px;
+}
+.zw-story-quote{
+  margin:22px 0;
+  background:linear-gradient(120deg,#f6f0ff,#fdf1f7);
+  border-radius:14px;
+  padding:18px 22px;
+  font-size:15px;
+  color:var(--zw-main);
+  font-weight:600;
+  border-left:4px solid var(--zw-accent);
+}
+
+/* 焦点内容 */
+.zw-focus-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:20px;
+}
+.zw-vcard{
+  background:#fff;
+  border-radius:var(--zw-radius);
+  overflow:hidden;
+  border:1px solid var(--zw-line);
+  box-shadow:0 6px 18px rgba(91,59,140,.06);
+  transition:.25s;
+  display:flex;
+  flex-direction:column;
+}
+.zw-vcard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(91,59,140,.16);}
+.zw-vcover{
+  position:relative;
+  overflow:hidden;
+}
+.zw-vcover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.4s;}
+.zw-vcard:hover .zw-vcover img{transform:scale(1.04);}
+.zw-vcover::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(43,33,64,0) 45%,rgba(43,33,64,.62));
+  pointer-events:none;
+}
+.zw-vplay{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  pointer-events:none;
+}
+.zw-vplay i{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.9);
+  display:grid;place-items:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+.zw-vplay i::before{
+  content:"";
+  border-style:solid;
+  border-width:9px 0 9px 15px;
+  border-color:transparent transparent transparent var(--zw-main);
+  margin-left:4px;
+}
+.zw-vtag{
+  position:absolute;
+  left:12px;top:12px;
+  background:rgba(43,33,64,.78);
+  color:#fff;
+  font-size:11.5px;
+  padding:3px 10px;
+  border-radius:999px;
+  backdrop-filter:blur(4px);
+  z-index:2;
+}
+.zw-vdur{
+  position:absolute;right:12px;bottom:12px;
+  background:rgba(0,0,0,.66);
+  color:#fff;font-size:11.5px;
+  padding:2px 9px;border-radius:6px;
+  z-index:2;
+}
+.zw-vbody{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1 1 auto;}
+.zw-vbody h3{font-size:16.5px;margin-bottom:7px;}
+.zw-vbody .zw-vdesc{font-size:13px;color:var(--zw-sub);flex:1 1 auto;}
+.zw-vmeta{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;color:var(--zw-sub);
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+.zw-avatar{
+  width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#fff;
+  flex:none;
+}
+.zw-vactions{
+  display:flex;align-items:center;gap:14px;
+  margin-top:12px;padding-top:11px;
+  border-top:1px dashed var(--zw-line);
+  font-size:12.5px;
+  color:var(--zw-sub);
+}
+.zw-act{
+  display:inline-flex;align-items:center;gap:5px;
+  background:none;border:0;padding:0;
+  font-size:12.5px;color:var(--zw-sub);
+  transition:.18s;
+}
+.zw-act:hover{color:var(--zw-main);}
+.zw-act.zw-liked{color:var(--zw-accent);font-weight:700;}
+.zw-act.zw-saved{color:var(--zw-mint);font-weight:700;}
+.zw-focus-big .zw-vbody h3{font-size:20px;}
+.zw-focus-big .zw-vbody .zw-vdesc{font-size:13.5px;}
+.zw-focus-side{display:flex;flex-direction:column;gap:20px;}
+.zw-focus-side .zw-vcover img{aspect-ratio:16/7;}
+
+/* 视频流 */
+.zw-filter-row{
+  display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px;
+}
+.zw-chip{
+  border:1px solid var(--zw-line);
+  background:#fff;
+  color:var(--zw-sub);
+  border-radius:999px;
+  padding:6px 16px;
+  font-size:13px;font-weight:600;
+  transition:.2s;
+}
+.zw-chip:hover{border-color:var(--zw-main-soft);color:var(--zw-main);}
+.zw-chip.zw-active{background:var(--zw-main);color:#fff;border-color:var(--zw-main);}
+.zw-grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* 专题 */
+.zw-topic-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.zw-topic{
+  border-radius:var(--zw-radius);
+  padding:24px 22px;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  min-height:186px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  box-shadow:var(--zw-shadow);
+  transition:.25s;
+}
+.zw-topic:hover{transform:translateY(-5px);}
+.zw-topic::before{
+  content:"";
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 82% 14%,rgba(255,255,255,.34),transparent 52%);
+}
+.zw-topic-tag{
+  position:relative;font-size:11.5px;letter-spacing:1.6px;
+  opacity:.85;font-weight:700;margin-bottom:6px;
+}
+.zw-topic h3{position:relative;font-size:19px;margin-bottom:8px;}
+.zw-topic p{position:relative;font-size:12.8px;opacity:.9;margin:0;}
+.zw-topic-status{
+  position:relative;
+  margin-top:12px;
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11.5px;
+  background:rgba(255,255,255,.2);
+  border-radius:999px;
+  padding:3px 11px;
+  align-self:flex-start;
+}
+.zw-topic-status i{width:6px;height:6px;border-radius:50%;background:#7dffc9;display:block;}
+
+/* 作者 */
+.zw-author-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.zw-author{
+  background:#fff;
+  border:1px solid var(--zw-line);
+  border-radius:var(--zw-radius);
+  padding:22px 18px;
+  text-align:center;
+  transition:.25s;
+  box-shadow:0 5px 16px rgba(91,59,140,.05);
+}
+.zw-author:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(91,59,140,.14);}
+.zw-author-ava{
+  width:62px;height:62px;border-radius:50%;
+  margin:0 auto 12px;
+  display:grid;place-items:center;
+  font-size:22px;font-weight:800;color:#fff;
+  box-shadow:0 8px 18px rgba(91,59,140,.22);
+}
+.zw-author h3{font-size:16px;margin-bottom:3px;}
+.zw-author-field{font-size:12px;color:var(--zw-accent);font-weight:700;margin-bottom:8px;}
+.zw-author p{font-size:12.5px;color:var(--zw-sub);min-height:42px;margin-bottom:10px;}
+.zw-author-num{
+  display:flex;justify-content:center;gap:16px;
+  font-size:11.5px;color:var(--zw-sub);
+  border-top:1px dashed var(--zw-line);
+  padding-top:10px;
+}
+.zw-author-num b{color:var(--zw-main);font-size:13px;}
+.zw-author-btn{
+  margin-top:12px;width:100%;
+  border:1.5px solid var(--zw-line);
+  background:#faf7ff;color:var(--zw-main);
+  border-radius:999px;padding:7px;font-size:12.5px;font-weight:700;
+  transition:.2s;
+}
+.zw-author-btn:hover{background:var(--zw-main);color:#fff;border-color:var(--zw-main);}
+
+/* 评论 */
+.zw-review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.zw-review{
+  background:#fff;
+  border:1px solid var(--zw-line);
+  border-radius:16px;
+  padding:18px 20px;
+  position:relative;
+  font-size:13.5px;
+  color:#453a5c;
+}
+.zw-review::before{
+  content:"“";
+  position:absolute;right:18px;top:2px;
+  font-size:52px;color:var(--zw-accent-soft);
+  font-family:Georgia,serif;line-height:1;
+}
+.zw-review-user{
+  display:flex;align-items:center;gap:9px;
+  margin-bottom:10px;
+}
+.zw-review-user b{font-size:13.5px;color:var(--zw-ink);}
+.zw-review-user span{font-size:11.5px;color:var(--zw-sub);display:block;font-weight:400;}
+.zw-review p{margin:0;position:relative;z-index:1;}
+
+/* 影像墙 */
+.zw-wall{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:128px;
+  gap:14px;
+}
+.zw-wall-item{
+  border-radius:14px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 5px 16px rgba(91,59,140,.09);
+}
+.zw-wall-item img{width:100%;height:100%;object-fit:cover;transition:.4s;}
+.zw-wall-item:hover img{transform:scale(1.06);}
+.zw-wall-item span{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:16px 12px 9px;
+  font-size:12px;color:#fff;font-weight:600;
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72));
+}
+.zw-wall-lg{grid-column:span 2;grid-row:span 2;}
+.zw-wall-wide{grid-column:span 2;}
+.zw-wall-tall{grid-row:span 2;}
+
+/* 灵感/榜单 */
+.zw-cols-2{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.zw-panel{
+  background:#fff;border:1px solid var(--zw-line);
+  border-radius:var(--zw-radius);padding:26px 26px 22px;
+  box-shadow:0 6px 18px rgba(91,59,140,.05);
+}
+.zw-panel h3{font-size:19px;margin-bottom:4px;}
+.zw-panel .zw-panel-sub{font-size:12.5px;color:var(--zw-sub);margin-bottom:16px;}
+.zw-idea{
+  display:flex;gap:12px;
+  padding:12px 0;
+  border-bottom:1px dashed var(--zw-line);
+}
+.zw-idea:last-child{border-bottom:0;padding-bottom:0;}
+.zw-idea-num{
+  width:26px;height:26px;flex:none;
+  border-radius:8px;
+  background:var(--zw-accent-soft);color:var(--zw-accent);
+  display:grid;place-items:center;
+  font-size:12.5px;font-weight:800;
+}
+.zw-idea h4{font-size:14px;margin-bottom:2px;}
+.zw-idea p{font-size:12.5px;color:var(--zw-sub);margin:0;}
+.zw-rank{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 0;border-bottom:1px dashed var(--zw-line);
+}
+.zw-rank:last-child{border-bottom:0;padding-bottom:0;}
+.zw-rank-no{
+  width:24px;height:24px;flex:none;border-radius:50%;
+  display:grid;place-items:center;font-size:12px;font-weight:800;
+  background:#f0eaff;color:var(--zw-main);
+}
+.zw-rank:nth-child(1) .zw-rank-no{background:var(--zw-accent);color:#fff;}
+.zw-rank:nth-child(2) .zw-rank-no{background:var(--zw-main-soft);color:#fff;}
+.zw-rank:nth-child(3) .zw-rank-no{background:var(--zw-mint);color:#fff;}
+.zw-rank-body{flex:1 1 auto;min-width:0;}
+.zw-rank-body b{display:block;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.zw-rank-body span{font-size:11.5px;color:var(--zw-sub);}
+.zw-rank-hot{font-size:12px;color:var(--zw-accent);font-weight:700;flex:none;}
+
+/* FAQ */
+.zw-faq-list{display:grid;gap:12px;}
+.zw-faq-list details{
+  background:#fff;
+  border:1px solid var(--zw-line);
+  border-radius:14px;
+  padding:0 20px;
+  transition:.2s;
+}
+.zw-faq-list details[open]{border-color:var(--zw-main-soft);box-shadow:0 8px 22px rgba(91,59,140,.09);}
+.zw-faq-list summary{
+  list-style:none;
+  cursor:pointer;
+  padding:15px 30px 15px 0;
+  font-size:14.5px;font-weight:700;
+  position:relative;
+  color:var(--zw-ink);
+}
+.zw-faq-list summary::-webkit-details-marker{display:none;}
+.zw-faq-list summary::after{
+  content:"+";
+  position:absolute;right:0;top:50%;
+  transform:translateY(-50%);
+  font-size:20px;color:var(--zw-main);font-weight:400;
+}
+.zw-faq-list details[open] summary::after{content:"−";}
+.zw-faq-list details p{font-size:13.5px;color:var(--zw-sub);padding:0 0 16px;margin:0;}
+
+/* 动态 */
+.zw-news-item{
+  display:flex;gap:16px;
+  padding:14px 0;
+  border-bottom:1px dashed var(--zw-line);
+}
+.zw-news-item:last-child{border-bottom:0;padding-bottom:0;}
+.zw-news-date{
+  flex:none;width:64px;text-align:center;
+  background:linear-gradient(160deg,#f4edff,#fdeef6);
+  border-radius:12px;padding:8px 0;
+}
+.zw-news-date b{display:block;font-size:17px;color:var(--zw-main);line-height:1.2;}
+.zw-news-date span{font-size:11px;color:var(--zw-sub);}
+.zw-news-body b{display:block;font-size:14.5px;margin-bottom:3px;}
+.zw-news-body p{font-size:12.8px;color:var(--zw-sub);margin:0;}
+
+/* 联系/投稿 */
+.zw-contact{
+  background:linear-gradient(135deg,#4a2f78,#6b46a8 60%,#a273d8);
+  border-radius:24px;
+  padding:44px 40px;
+  color:#fff;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:34px;
+  align-items:center;
+  box-shadow:0 22px 48px rgba(74,47,120,.3);
+}
+.zw-contact h2{font-size:28px;margin-bottom:12px;}
+.zw-contact p{font-size:14px;opacity:.86;margin-bottom:8px;}
+.zw-contact-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+.zw-contact-info{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:16px;
+  padding:20px 22px;
+  font-size:13.5px;
+}
+.zw-contact-info div{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.18);}
+.zw-contact-info div:last-child{border-bottom:0;}
+.zw-contact-info dt{opacity:.78;}
+.zw-contact-info dd{margin:0;font-weight:700;}
+
+/* 页脚 */
+.zw-footer{
+  background:#241a38;
+  color:#c4b8d9;
+  padding:50px 0 24px;
+  font-size:13px;
+  margin-top:0;
+}
+.zw-footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:30px;
+  padding-bottom:30px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.zw-footer h4{color:#fff;font-size:14.5px;margin-bottom:13px;}
+.zw-footer p{font-size:12.8px;line-height:1.9;color:#a99bc4;}
+.zw-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;}
+.zw-footer ul a{font-size:12.8px;color:#a99bc4;transition:.2s;}
+.zw-footer ul a:hover{color:#fff;}
+.zw-footer-bottom{
+  padding-top:20px;
+  display:flex;justify-content:space-between;gap:14px;
+  flex-wrap:wrap;
+  font-size:12px;color:#8d7fa8;
+}
+.zw-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.zw-footer-brand .zw-brand-mark{width:36px;height:36px;font-size:15px;border-radius:11px;}
+
+/* 回到顶部 */
+.zw-top-btn{
+  position:fixed;right:22px;bottom:26px;
+  width:46px;height:46px;border-radius:50%;
+  border:0;background:var(--zw-main);color:#fff;
+  font-size:18px;
+  box-shadow:0 10px 24px rgba(91,59,140,.34);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:.28s;z-index:200;
+}
+.zw-top-btn.zw-show{opacity:1;visibility:visible;transform:translateY(0);}
+
+/* Toast & 弹窗 */
+.zw-toast{
+  position:fixed;left:50%;bottom:38px;
+  transform:translate(-50%,20px);
+  background:rgba(36,26,56,.95);
+  color:#fff;font-size:13.5px;
+  border-radius:999px;
+  padding:11px 24px;
+  opacity:0;visibility:hidden;
+  transition:.28s;z-index:300;
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
+  max-width:86vw;text-align:center;
+}
+.zw-toast.zw-show{opacity:1;visibility:visible;transform:translate(-50%,0);}
+.zw-modal-mask{
+  position:fixed;inset:0;
+  background:rgba(36,26,56,.55);
+  backdrop-filter:blur(3px);
+  display:grid;place-items:center;
+  padding:20px;
+  opacity:0;visibility:hidden;
+  transition:.25s;z-index:250;
+}
+.zw-modal-mask.zw-show{opacity:1;visibility:visible;}
+.zw-modal{
+  background:#fff;border-radius:20px;
+  width:100%;max-width:520px;
+  padding:28px 28px 24px;
+  transform:translateY(14px);
+  transition:.28s;
+  max-height:86vh;overflow:auto;
+}
+.zw-modal-mask.zw-show .zw-modal{transform:translateY(0);}
+.zw-modal h3{font-size:20px;margin-bottom:6px;}
+.zw-modal-sub{font-size:13px;color:var(--zw-sub);margin-bottom:18px;}
+.zw-modal label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--zw-main);}
+.zw-modal input,.zw-modal textarea,.zw-modal select{
+  width:100%;border:1px solid var(--zw-line);
+  border-radius:11px;padding:10px 13px;
+  font-size:13.5px;font-family:inherit;
+  margin-bottom:14px;outline:none;
+  background:#faf8fe;color:var(--zw-ink);
+}
+.zw-modal input:focus,.zw-modal textarea:focus,.zw-modal select:focus{border-color:var(--zw-main-soft);background:#fff;}
+.zw-modal textarea{resize:vertical;min-height:88px;}
+.zw-modal-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px;}
+.zw-modal-close{
+  position:absolute;top:14px;right:16px;
+  border:0;background:transparent;font-size:22px;color:var(--zw-sub);
+}
+.zw-modal-rel{position:relative;}
+
+/* 响应式 */
+@media(max-width:1000px){
+  .zw-hero-grid{grid-template-columns:1fr;gap:34px;}
+  .zw-hero h1{font-size:38px;}
+  .zw-focus-grid{grid-template-columns:1fr;}
+  .zw-grid-3{grid-template-columns:repeat(2,1fr);}
+  .zw-topic-grid{grid-template-columns:repeat(2,1fr);}
+  .zw-author-grid{grid-template-columns:repeat(2,1fr);}
+  .zw-review-grid{grid-template-columns:repeat(2,1fr);}
+  .zw-cols-2{grid-template-columns:1fr;}
+  .zw-contact{grid-template-columns:1fr;}
+  .zw-footer-grid{grid-template-columns:1fr 1fr;}
+  .zw-story-cols{grid-template-columns:1fr;}
+  .zw-search input{width:104px;}
+}
+@media(max-width:720px){
+  .zw-header-inner{flex-wrap:wrap;gap:10px;}
+  .zw-burger{display:block;}
+  .zw-nav{
+    display:none;
+    flex-basis:100%;
+    justify-content:flex-start;
+    border-top:1px dashed var(--zw-line);
+    padding-top:10px;
+  }
+  .zw-nav.zw-open{display:flex;}
+  .zw-header-tools{order:-1;margin-left:auto;}
+  .zw-search input{width:96px;}
+  .zw-hero h1{font-size:32px;}
+  .zw-hero{padding:36px 0 42px;}
+  .zw-section{padding:42px 0;}
+  .zw-section-head h2{font-size:23px;}
+  .zw-grid-3{grid-template-columns:1fr;}
+  .zw-topic-grid{grid-template-columns:1fr;}
+  .zw-author-grid{grid-template-columns:1fr;}
+  .zw-review-grid{grid-template-columns:1fr;}
+  .zw-stats{gap:8px;}
+  .zw-stat b{font-size:17px;}
+  .zw-wall{grid-template-columns:repeat(2,1fr);grid-auto-rows:118px;}
+  .zw-wall-lg{grid-column:span 2;grid-row:span 2;}
+  .zw-story-panel{padding:24px 20px;}
+  .zw-contact{padding:30px 22px;}
+  .zw-contact h2{font-size:23px;}
+  .zw-footer-grid{grid-template-columns:1fr;}
+  .zw-toast{bottom:70px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="zw-sticky-head">
+  <div class="zw-announce">
+    <div class="zw-announce-inner">
+      <span class="zw-announce-badge">公告</span>
+      <div class="zw-announce-text">
+        紫藤家园sp 11 月内容更新：《院落四季》第二季 6 集已上线，新增「邻里共同创作」投稿入口。
+      </div>
+      <a href="#zw-news">查看更新日志</a>
+    </div>
+  </div>
+
+  <header class="zw-header">
+    <div class="zw-header-inner">
+      <a class="zw-brand" href="#zw-top" aria-label="紫藤家园sp 官网首页">
+        <span class="zw-brand-mark">紫</span>
+        <span>
+          <span class="zw-brand-name">紫藤家园<span>sp</span></span>
+          <span class="zw-brand-sub">社区影像官方门户</span>
+        </span>
+      </a>
+      <nav class="zw-nav" id="zwNav" aria-label="主导航">
+        <a href="#zw-top">首页</a>
+        <a href="#zw-focus">焦点影像</a>
+        <a href="#zw-videos">热门内容</a>
+        <a href="#zw-topics">社区专题</a>
+        <a href="#zw-authors">创作者</a>
+        <a href="#zw-news">品牌动态</a>
+        <a href="#zw-faq">帮助</a>
+        <a href="#zw-contact">联系</a>
+      </nav>
+      <div class="zw-header-tools">
+        <form class="zw-search" id="zwSearchForm" role="search">
+          <input type="search" id="zwSearchInput" placeholder="搜索紫藤家园sp内容" aria-label="站内搜索">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="zw-burger" id="zwBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <div class="zw-search-tip" id="zwSearchTip" role="status" aria-live="polite"></div>
+  </header>
+</div>
+
+<main id="zw-top">
+
+  <!-- 首屏 -->
+  <section class="zw-hero" aria-labelledby="zwHeroTitle">
+    <div class="zw-container zw-hero-grid">
+      <div>
+        <span class="zw-hero-tag"><i></i>紫藤家园sp 官方网站 · 持续运营第 7 年</span>
+        <h1 id="zwHeroTitle"><em>紫藤家园sp</em>，让社区的每一帧都有回响</h1>
+        <p class="zw-hero-lead">一个以院落、街巷与邻里生活为原点的视频品牌社区，用正版高清影像记录真实、温暖、有力量的日常。</p>
+        <div class="zw-hero-intro">
+          作为深耕社区生活影像领域的品牌平台，紫藤家园sp 致力于为创作者与家庭用户搭建高品质内容生态，提供原创影像发布、精品内容聚合与社区互动服务，是企业与用户之间值得信赖的影像桥梁。
+        </div>
+        <div class="zw-hero-actions">
+          <a class="zw-btn zw-btn-main" href="#zw-videos">浏览精品内容</a>
+          <button class="zw-btn zw-btn-accent" type="button" data-zw-open="submit">我要投稿</button>
+          <a class="zw-btn zw-btn-ghost" href="#zw-about">品牌故事</a>
+        </div>
+        <div class="zw-stats" aria-label="平台核心数据">
+          <div class="zw-stat"><b>12.8 万</b><span>社区注册用户</span></div>
+          <div class="zw-stat"><b>9,420</b><span>原创作品总量</span></div>
+          <div class="zw-stat"><b>2,160 万</b><span>年度播放次数</span></div>
+        </div>
+      </div>
+      <div class="zw-hero-visual">
+        <div class="zw-hero-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 560'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f3e9ff'/%3E%3Cstop offset='1' stop-color='%23d9c3f2'/%3E%3C/linearGradient%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236b46a8'/%3E%3Cstop offset='1' stop-color='%23b58ce0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='560' fill='url(%23sky)'/%3E%3Ccircle cx='640' cy='120' r='62' fill='%23fff3d1' opacity='.85'/%3E%3Crect x='0' y='330' width='800' height='230' fill='%234a2f78'/%3E%3Crect x='90' y='210' width='250' height='180' rx='12' fill='%23f7f0ff'/%3E%3Crect x='90' y='210' width='250' height='34' rx='12' fill='%23e8629c'/%3E%3Crect x='112' y='268' width='52' height='52' rx='6' fill='%23b58ce0'/%3E%3Crect x='184' y='268' width='52' height='52' rx='6' fill='%239a74cf'/%3E%3Crect x='256' y='268' width='52' height='52' rx='6' fill='%23b58ce0'/%3E%3Crect x='112' y='336' width='90' height='54' rx='6' fill='%235b3b8c'/%3E%3Crect x='400' y='176' width='300' height='214' rx='14' fill='%23fbf7ff'/%3E%3Crect x='400' y='176' width='300' height='40' rx='14' fill='%233fae9c'/%3E%3Crect x='424' y='242' width='58' height='58' rx='7' fill='%23c9a9e8'/%3E%3Crect x='498' y='242' width='58' height='58' rx='7' fill='%23e8a9c9'/%3E%3Crect x='572' y='242' width='58' height='58' rx='7' fill='%23c9a9e8'/%3E%3Crect x='424' y='318' width='206' height='42' rx='7' fill='%235b3b8c'/%3E%3Cpath d='M0 340 Q200 280 400 330 T800 322' stroke='%233fae9c' stroke-width='10' fill='none' opacity='.5'/%3E%3Ccircle cx='150' cy='400' r='7' fill='%23b58ce0'/%3E%3Ccircle cx='380' cy='440' r='9' fill='%23e8629c'/%3E%3Ccircle cx='620' cy='452' r='6' fill='%23c9a9e8'/%3E%3Cpath d='M700 430 q26 -22 52 0' stroke='%23f8e6a0' stroke-width='4' fill='none'/%3E%3C/svg%3E" alt="紫藤家园sp 社区院落影像主视觉">
+          <span class="zw-vtag">品牌主视觉</span>
+        </div>
+        <div class="zw-hero-float">
+          邻里共创计划
+          <span>本月 86 位居民上传</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主题解析 -->
+  <section class="zw-section" id="zw-about">
+    <div class="zw-container">
+      <div class="zw-story-panel">
+        <span class="zw-kicker">About · 关键词定位与解析</span>
+        <h2>紫藤家园sp 是什么：一所社区的影像档案室</h2>
+        <div class="zw-story-cols">
+          <div>
+            <h3>从一株紫藤开始的品牌原点</h3>
+            <p>紫藤家园sp 的名字来自许多老社区里那一架爬满廊道的紫藤：春天开花，夏天成荫，秋天落叶，冬天缠着光秃的枝干等待下一次盛开。它不 spectacular，却年年准时，是邻里之间最稳定的公共记忆。紫藤家园sp 把这个意象作为品牌原点，希望影像也像紫藤一样，安静地攀附在社区生活的结构上，年复一年地形成一层可被看见的厚度。</p>
+            <p>作为一个面向普通家庭与在地创作者的视频品牌，平台并不追逐宏大的叙事。紫藤家园sp 更关心一锅汤怎么炖、楼道灯怎么修、老人怎么在手机上看清晰的大字幕、孩子的第一次班级演出如何被完整记录。这些内容在传统内容生态中往往被判断为「不重要」，但它们恰恰是真实生活的主干。</p>
+            <h3>内容生态：原创、正版、可追溯</h3>
+            <p>紫藤家园sp 坚持原创与正版两条底线。每一支上架作品都会标注创作者署名、拍摄时间与场景来源，平台提供高清母版存储与可追溯的发布记录，创作者可以随时查看自己的作品被引用与推荐的情况。我们相信，只有权利清晰的内容生态，才能让创作者持续投入，也才能让企业与合作机构放心地参与社区共建。</p>
+            <p>内容分类上，平台围绕「日常记录、实用技巧、邻里故事、在地文化、创作幕后」五条主线组织，每条主线设有专门的编辑与审校角色，负责内容质量的把关与统一呈现标准。这种近似传统媒体的工作方式，与社区平台的开放投稿机制并行，使精品内容与日常内容在同一个空间里共存。</p>
+            <h3>为什么是社区，而不是流量池</h3>
+            <p>社区型视频平台的价值在于关系的沉淀，而不是单条内容的瞬时爆发。紫藤家园sp 在机制上刻意降低了爆款权重，提高了「持续创作」「互相回应」「共同完成」的比例。一个连续记录自家庭院三年的账号，其内容在推荐中获得的稳定性，往往高于一条短期内数据漂亮但难以复现的短视频。这种取向决定了平台的口碑基础来自信任，而非猎奇。</p>
+          </div>
+          <div>
+            <h3>创作者是家园的共建者</h3>
+            <p>在紫藤家园sp 的语境里，创作者不是被平台「使用」的内容供给方，而是家园的共建者。平台为创作者提供拍摄脚本参考、剪辑思路、字幕规范、版权说明等工具与文档，也定期组织线下交流与拍摄实践。我们相信专业能力的提升，最终会回馈到内容品质与社区氛围上。</p>
+            <p>对于企业与合作机构，紫藤家园sp 提供品牌故事共创、社区活动记录、公益项目影像留档等服务。这类合作并不追求硬性曝光，而是帮助品牌以更贴近生活的方式进入社区语境，形成可被居民记住的具体片段。这也是平台所理解的社会责任：让商业表达与真实生活之间存在缓冲区。</p>
+            <div class="zw-story-quote">「我们记录的不是完美的生活，而是愿意被认真对待的生活。」——紫藤家园sp 编辑部</div>
+            <h3>技术、观看与陪伴</h3>
+            <p>平台对播放器、字幕、倍速、清晰度切换等基础体验做了长期打磨，尤其重视中老年用户与低带宽环境下的可看性。高清不是参数上的炫耀，而是让细节可辨认：一张老照片上的字、一段手写菜谱上的笔迹、孩子表情里不易察觉的变化。陪伴也不只是一句口号，它意味着内容在合适的时间被合适的人看见，并在需要时可以被反复回看。</p>
+            <h3>持续运营与未来方向</h3>
+            <p>紫藤家园sp 已持续运营七年，经历了从图文到视频、从单一院落记录到多城市社区联动的过程。未来平台将继续在垂直领域深耕：完善创作者成长体系、扩充社区影像档案、探索更友好的家庭共享观看方式，并保持对内容品质与版权的严格要求。我们希望成为用户首选的社区影像平台，也希望这份档案在十年后依然可读、可查、可被后人理解。</p>
+            <p>如果你也住在某个有故事的院落、街巷或楼栋，欢迎把你的镜头交给紫藤家园sp。这里不缺少观众，缺少的是被认真记录的日常。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="zw-section zw-section-alt" id="zw-focus">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Focus · 焦点影像</span>
+          <h2>本周编辑推荐</h2>
+          <p>由紫藤家园sp 编辑部与社区评审共同选出的重点内容，聚焦真实生活里的具体片段。</p>
+        </div>
+        <a class="zw-link-more" href="#zw-videos">查看全部焦点</a>
+      </div>
+      <div class="zw-focus-grid">
+        <article class="zw-vcard zw-focus-big">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f7d9c4'/%3E%3Cstop offset='1' stop-color='%23e8a07c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23a)'/%3E%3Ccircle cx='640' cy='90' r='54' fill='%23fff3d9' opacity='.9'/%3E%3Crect x='60' y='250' width='680' height='150' rx='10' fill='%238a5a3c'/%3E%3Crect x='120' y='180' width='160' height='70' rx='8' fill='%23fdf8f0'/%3E%3Crect x='130' y='192' width='140' height='12' rx='6' fill='%23e8a07c'/%3E%3Crect x='130' y='214' width='100' height='10' rx='5' fill='%23c7b39c'/%3E%3Ccircle cx='420' cy='300' r='46' fill='%23fdf8f0'/%3E%3Ccircle cx='420' cy='300' r='34' fill='%23e8cf9c'/%3E%3Cpath d='M330 380 h160 M340 396 h140' stroke='%23fdf8f0' stroke-width='6' stroke-linecap='round' opacity='.7'/%3E%3Crect x='560' y='200' width='120' height='50' rx='8' fill='%234a2f78'/%3E%3C/svg%3E" alt="社区厨房间的一锅慢炖汤影像封面">
+            <span class="zw-vtag">焦点 · 日常记录</span>
+            <span class="zw-vdur">18:42</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>一锅汤的六个小时：老院厨房里的慢炖守候</h3>
+            <p class="zw-vdesc">从清晨挑骨到最后调味，镜头几乎没有离开灶台。创作者用 18 分钟记录了一锅汤的完整时间线，也记录了一家人的作息与沉默里的关心。这是紫藤家园sp 本月口碑最高的日常记录作品之一。</p>
+            <div class="zw-vmeta">
+              <span class="zw-avatar" style="background:#e8a07c">林</span>
+              <span>林间灶台</span>
+              <span>·</span>
+              <span>2026-11-16</span>
+              <span>·</span>
+              <span>3.2 万次播放</span>
+            </div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>1,284</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+        <div class="zw-focus-side">
+          <article class="zw-vcard">
+            <div class="zw-vcover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 350'%3E%3Cdefs%3E%3ClinearGradient id='b' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cfe6ff'/%3E%3Cstop offset='1' stop-color='%237ba7d9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='350' fill='url(%23b)'/%3E%3Crect x='0' y='240' width='800' height='110' fill='%233d5a7d'/%3E%3Crect x='80' y='130' width='180' height='110' rx='8' fill='%23f4f8ff'/%3E%3Crect x='80' y='130' width='180' height='26' rx='8' fill='%238a3b5c'/%3E%3Crect x='330' y='100' width='220' height='140' rx='8' fill='%23f4f8ff'/%3E%3Crect x='330' y='100' width='220' height='30' rx='8' fill='%233fae9c'/%3E%3Crect x='356' y='148' width='56' height='56' rx='5' fill='%237ba7d9'/%3E%3Crect x='428' y='148' width='56' height='56' rx='5' fill='%23c7d9ee'/%3E%3Cpath d='M600 200 l60 -60 60 60' fill='none' stroke='%23fff' stroke-width='6' opacity='.6'/%3E%3C/svg%3E" alt="老楼道公共空间改造记录封面">
+              <span class="zw-vtag">实用技巧</span>
+              <span class="zw-vdur">12:05</span>
+            </div>
+            <div class="zw-vbody">
+              <h3>楼道里的三平米：一次低成本公共空间改造</h3>
+              <p class="zw-vdesc">居民自筹、旧物再利用，把闲置转角变成可停留的小角落。</p>
+              <div class="zw-vmeta">
+                <span class="zw-avatar" style="background:#7ba7d9">周</span>
+                <span>周工改造笔记</span>
+                <span>·</span>
+                <span>1.8 万次播放</span>
+              </div>
+              <div class="zw-vactions">
+                <button class="zw-act" type="button" data-zw-like>♡ <span>846</span></button>
+                <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+                <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+              </div>
+            </div>
+          </article>
+          <article class="zw-vcard">
+            <div class="zw-vcover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 350'%3E%3Cdefs%3E%3ClinearGradient id='c' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%232f1f4a'/%3E%3Cstop offset='1' stop-color='%235b3b8c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='350' fill='url(%23c)'/%3E%3Ccircle cx='400' cy='150' r='70' fill='%23f8e6a0' opacity='.9'/%3E%3Ccircle cx='400' cy='150' r='52' fill='%232f1f4a'/%3E%3Cpath d='M200 260 q60 -70 120 0 t120 0 t120 0 t120 -60' fill='none' stroke='%23c9a9e8' stroke-width='6'/%3E%3Ccircle cx='180' cy='110' r='4' fill='%23fff'/%3E%3Ccircle cx='620' cy='80' r='5' fill='%23fff'/%3E%3Ccircle cx='700' cy='190' r='3' fill='%23f8e6a0'/%3E%3C/svg%3E" alt="夜间社区音乐现场影像封面">
+              <span class="zw-vtag">音乐现场</span>
+              <span class="zw-vdur">24:30</span>
+            </div>
+            <div class="zw-vbody">
+              <h3>夏夜院落音乐会：把舞台还给楼下的人</h3>
+              <p class="zw-vdesc">居民自发组织的夜间演出，完整收录六组表演与幕后。</p>
+              <div class="zw-vmeta">
+                <span class="zw-avatar" style="background:#5b3b8c">顾</span>
+                <span>顾声现场</span>
+                <span>·</span>
+                <span>2.4 万次播放</span>
+              </div>
+              <div class="zw-vactions">
+                <button class="zw-act" type="button" data-zw-like>♡ <span>1,102</span></button>
+                <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+                <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="zw-section" id="zw-videos">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Library · 热门内容</span>
+          <h2>社区影像库正在更新</h2>
+          <p>按主题筛选你关心的内容，所有作品均由紫藤家园sp 创作者原创发布。</p>
+        </div>
+        <a class="zw-link-more" href="#zw-topics">浏览专题企划</a>
+      </div>
+      <div class="zw-filter-row" id="zwFilterRow" role="tablist" aria-label="内容标签筛选">
+        <button class="zw-chip zw-active" type="button" data-zw-filter="all">全部</button>
+        <button class="zw-chip" type="button" data-zw-filter="日常">日常记录</button>
+        <button class="zw-chip" type="button" data-zw-filter="技巧">实用技巧</button>
+        <button class="zw-chip" type="button" data-zw-filter="人物">人物访谈</button>
+        <button class="zw-chip" type="button" data-zw-filter="文化">在地文化</button>
+        <button class="zw-chip" type="button" data-zw-filter="幕后">创作幕后</button>
+      </div>
+      <div class="zw-grid-3" id="zwVideoGrid">
+
+        <article class="zw-vcard" data-zw-tag="日常">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='d' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e9f7ef'/%3E%3Cstop offset='1' stop-color='%2399cfae'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23d)'/%3E%3Crect x='0' y='330' width='800' height='120' fill='%233f7d5a'/%3E%3Cpath d='M120 330 v-120 h180 v120' fill='%23f7fff9'/%3E%3Cpath d='M120 210 l90 -70 90 70' fill='%23cfe9d8'/%3E%3Crect x='190' y='250' width='46' height='80' rx='4' fill='%233f7d5a'/%3E%3Ccircle cx='560' cy='250' r='60' fill='%23f7fff9'/%3E%3Ccircle cx='560' cy='250' r='44' fill='%2399cfae'/%3E%3Cpath d='M400 400 q40 -40 80 0' stroke='%23fff' stroke-width='5' fill='none' opacity='.6'/%3E%3C/svg%3E" alt="清晨院落浇花日常记录封面">
+            <span class="zw-vtag">日常记录</span>
+            <span class="zw-vdur">09:18</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>每天六点半：给院子里 43 盆植物浇水</h3>
+            <p class="zw-vdesc">一位退休教师的晨间流程，镜头平实，节奏舒缓。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#3fae9c">许</span><span>许老师的院子</span><span>·</span><span>1.1 万次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>532</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zw-vcard" data-zw-tag="技巧">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23fff4e6'/%3E%3Crect x='70' y='70' width='660' height='310' rx='14' fill='%23ffffff' stroke='%23e8b996' stroke-width='3'/%3E%3Crect x='110' y='110' width='240' height='150' rx='8' fill='%23f4d5b8'/%3E%3Crect x='380' y='110' width='310' height='16' rx='8' fill='%23e8b996'/%3E%3Crect x='380' y='146' width='250' height='12' rx='6' fill='%23e2cbb5'/%3E%3Crect x='380' y='176' width='280' height='12' rx='6' fill='%23e2cbb5'/%3E%3Crect x='380' y='206' width='200' height='12' rx='6' fill='%23e2cbb5'/%3E%3Crect x='110' y='290' width='580' height='10' rx='5' fill='%23f0dcc8'/%3E%3Crect x='110' y='316' width='420' height='10' rx='5' fill='%23f0dcc8'/%3E%3Ccircle cx='620' cy='300' r='24' fill='%23e8629c' opacity='.7'/%3E%3C/svg%3E" alt="家务收纳步骤教学视频封面">
+            <span class="zw-vtag">实用技巧</span>
+            <span class="zw-vdur">15:47</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>小户型收纳：把储物间拆成四个可复用单元</h3>
+            <p class="zw-vdesc">从测量到分组，一套普通家庭可复制的收纳方法。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#e8b996">沈</span><span>沈家整理术</span><span>·</span><span>2.2 万次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>978</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zw-vcard" data-zw-tag="人物">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23eef1f7'/%3E%3Crect x='90' y='90' width='620' height='270' rx='16' fill='%234a5a78'/%3E%3Ccircle cx='300' cy='210' r='66' fill='%23f4d5b8'/%3E%3Ccircle cx='300' cy='190' r='40' fill='%23e8c4a0'/%3E%3Cpath d='M220 330 q80 -90 160 0' fill='%23c9d8ee'/%3E%3Crect x='430' y='160' width='210' height='18' rx='9' fill='%23fff' opacity='.85'/%3E%3Crect x='430' y='198' width='170' height='12' rx='6' fill='%239db3d4'/%3E%3Crect x='430' y='226' width='190' height='12' rx='6' fill='%239db3d4'/%3E%3Crect x='430' y='254' width='140' height='12' rx='6' fill='%239db3d4'/%3E%3C/svg%3E" alt="社区人物访谈节目封面">
+            <span class="zw-vtag">人物访谈</span>
+            <span class="zw-vdur">32:12</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>在社区修了三十年自行车的老陈</h3>
+            <p class="zw-vdesc">一场不设提纲的长谈，关于手艺、邻里和慢慢变老。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#4a5a78">陈</span><span>慢访问</span><span>·</span><span>3.6 万次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>1,760</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zw-vcard" data-zw-tag="文化">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23fdf6e3'/%3E%3Cpath d='M0 360 Q200 300 400 350 T800 340 v110 H0z' fill='%23c9a45c'/%3E%3Crect x='150' y='140' width='500' height='200' rx='10' fill='%23fffdf6' stroke='%23d9c39a' stroke-width='3'/%3E%3Crect x='150' y='140' width='500' height='46' rx='10' fill='%23b5502f'/%3E%3Crect x='200' y='220' width='120' height='90' rx='6' fill='%23f0e2c6'/%3E%3Crect x='340' y='220' width='120' height='90' rx='6' fill='%23f0e2c6'/%3E%3Crect x='480' y='220' width='120' height='90' rx='6' fill='%23f0e2c6'/%3E%3Ctext x='260' y='275' font-size='34' fill='%23b5502f' font-family='serif' text-anchor='middle'%3E福%3C/text%3E%3C/svg%3E" alt="老街区节令习俗记录封面">
+            <span class="zw-vtag">在地文化</span>
+            <span class="zw-vdur">21:05</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>老街区的年味：从腊月二十三开始</h3>
+            <p class="zw-vdesc">跟随四户人家，拼接出一条街的节令流程与记忆。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#b5502f">街</span><span>街巷笔记</span><span>·</span><span>2.9 万次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>1,344</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zw-vcard" data-zw-tag="幕后">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23251c3d'/%3E%3Crect x='80' y='100' width='280' height='180' rx='10' fill='%233d2f5e'/%3E%3Crect x='440' y='140' width='280' height='140' rx='10' fill='%233d2f5e'/%3E%3Ccircle cx='220' cy='190' r='42' fill='%23e8629c' opacity='.8'/%3E%3Crect x='120' y='320' width='560' height='14' rx='7' fill='%235b4a7d'/%3E%3Crect x='120' y='352' width='420' height='10' rx='5' fill='%23472f66'/%3E%3Crect x='120' y='376' width='480' height='10' rx='5' fill='%23472f66'/%3E%3Cpath d='M600 200 l70 0 l0 70' stroke='%233fae9c' stroke-width='6' fill='none'/%3E%3C/svg%3E" alt="剪辑工作台创作幕后封面">
+            <span class="zw-vtag">创作幕后</span>
+            <span class="zw-vdur">14:22</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>把 4 小时素材剪成 14 分钟：一次完整决策记录</h3>
+            <p class="zw-vdesc">创作者公开全部取舍过程，包括被删掉的三个段落。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#3d2f5e">剪</span><span>剪辑台日志</span><span>·</span><span>1.5 万次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>712</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zw-vcard" data-zw-tag="日常">
+          <div class="zw-vcover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23eaf4fb'/%3E%3Ccircle cx='660' cy='100' r='52' fill='%23ffe9a8'/%3E%3Crect x='0' y='320' width='800' height='130' fill='%2378b7a3'/%3E%3Cpath d='M0 330 Q160 260 320 320 T640 318 T800 330' fill='%23a8d8c8'/%3E%3Crect x='140' y='240' width='120' height='90' rx='6' fill='%23fff'/%3E%3Cpath d='M140 240 l60 -44 60 44' fill='%23d97b8c'/%3E%3Ccircle cx='470' cy='260' r='26' fill='%23fff'/%3E%3Cpath d='M470 234 v52 M444 260 h52' stroke='%23a8d8c8' stroke-width='5'/%3E%3C/svg%3E" alt="露台乘凉时光记录封面">
+            <span class="zw-vtag">日常记录</span>
+            <span class="zw-vdur">07:56</span>
+            <span class="zw-vplay"><i></i></span>
+          </div>
+          <div class="zw-vbody">
+            <h3>顶楼露台的傍晚：风、茶和邻居的闲话</h3>
+            <p class="zw-vdesc">十分钟长镜头，记录夏日傍晚最普通的一段闲聊。</p>
+            <div class="zw-vmeta"><span class="zw-avatar" style="background:#78b7a3">露</span><span>露台观察员</span><span>·</span><span>8,600 次播放</span></div>
+            <div class="zw-vactions">
+              <button class="zw-act" type="button" data-zw-like>♡ <span>421</span></button>
+              <button class="zw-act" type="button" data-zw-save>☆ 收藏</button>
+              <button class="zw-act" type="button" data-zw-share>⇪ 分享</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="zw-section zw-section-alt" id="zw-topics">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Series · 社区专题</span>
+          <h2>正在进行中的企划</h2>
+          <p>专题由平台策划、创作者共同完成，围绕社区生活的长期议题持续更新。</p>
+        </div>
+        <button class="zw-btn zw-btn-ghost zw-btn-sm" type="button" data-zw-open="submit">报名参与共创</button>
+      </div>
+      <div class="zw-topic-grid">
+        <article class="zw-topic" style="background:linear-gradient(145deg,#4a2f78,#7d5bb5);">
+          <span class="zw-topic-tag">SERIES 01</span>
+          <h3>院落四季</h3>
+          <p>以四季为线索，记录同一座院子在十二个月里的变化，已更新至第二季第 6 集。</p>
+          <span class="zw-topic-status"><i></i>更新中 · 每周三</span>
+        </article>
+        <article class="zw-topic" style="background:linear-gradient(145deg,#b5502f,#e89b6c);">
+          <span class="zw-topic-tag">SERIES 02</span>
+          <h3>楼下三平米</h3>
+          <p>聚焦楼道、转角、小广场的微型公共空间，征集居民改造与使用故事。</p>
+          <span class="zw-topic-status"><i></i>征集中 · 12 月截稿</span>
+        </article>
+        <article class="zw-topic" style="background:linear-gradient(145deg,#2f6b5e,#5fae9c);">
+          <span class="zw-topic-tag">SERIES 03</span>
+          <h3>会做饭的人</h3>
+          <p>拜访社区里那些擅长一件事的人，从一道家常菜聊到他们的生活节奏。</p>
+          <span class="zw-topic-status"><i></i>已完结 · 共 10 集</span>
+        </article>
+        <article class="zw-topic" style="background:linear-gradient(145deg,#3d4f7d,#7b93c4);">
+          <span class="zw-topic-tag">SERIES 04</span>
+          <h3>家庭影像修复计划</h3>
+          <p>帮助居民整理与修复老照片、旧录像，并记录修复过程中的家族故事。</p>
+          <span class="zw-topic-status"><i></i>公益项目 · 长期开放</span>
+        </article>
+        <article class="zw-topic" style="background:linear-gradient(145deg,#7a3b6b,#c07aa8);">
+          <span class="zw-topic-tag">SERIES 05</span>
+          <h3>邻里夜谈</h3>
+          <p>夜间长访谈企划，聊养老、育儿、工作与搬迁，按话题而非热度排序。</p>
+          <span class="zw-topic-status"><i></i>更新中 · 双周更新</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="zw-section" id="zw-authors">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Creators · 创作者矩阵</span>
+          <h2>家园里的记录者</h2>
+          <p>他们来自不同的院落与岗位，用镜头保持对日常的耐心。</p>
+        </div>
+        <a class="zw-link-more" href="#zw-contact">申请入驻</a>
+      </div>
+      <div class="zw-author-grid">
+        <article class="zw-author">
+          <div class="zw-author-ava" style="background:linear-gradient(145deg,#e8a07c,#e8629c)">林</div>
+          <h3>林间灶台</h3>
+          <div class="zw-author-field">美食烹饪 · 日常记录</div>
+          <p>做了十二年家常菜，坚持完整流程记录，拒绝过度摆盘。</p>
+          <div class="zw-author-num"><span>作品 <b>86</b></span><span>关注 <b>2.4 万</b></span></div>
+          <button class="zw-author-btn" type="button" data-zw-author="林间灶台：专注家常菜完整流程记录，作品 86 支，社区关注 2.4 万，紫藤家园sp 认证创作者。">查看档案</button>
+        </article>
+        <article class="zw-author">
+          <div class="zw-author-ava" style="background:linear-gradient(145deg,#7ba7d9,#3fae9c)">周</div>
+          <h3>周工改造笔记</h3>
+          <div class="zw-author-field">家居收纳 · 实用技巧</div>
+          <p>结构工程师，擅长把复杂改造拆成可执行的小步骤。</p>
+          <div class="zw-author-num"><span>作品 <b>54</b></span><span>关注 <b>1.9 万</b></span></div>
+          <button class="zw-author-btn" type="button" data-zw-author="周工改造笔记：结构工程背景，专注低成本空间改造与收纳方法，作品 54 支。">查看档案</button>
+        </article>
+        <article class="zw-author">
+          <div class="zw-author-ava" style="background:linear-gradient(145deg,#5b3b8c,#a273d8)">顾</div>
+          <h3>顾声现场</h3>
+          <div class="zw-author-field">音乐现场 · 创作幕后</div>
+          <p>记录社区里的非职业演出，保存现场原始声音与呼吸感。</p>
+          <div class="zw-author-num"><span>作品 <b>41</b></span><span>关注 <b>1.5 万</b></span></div>
+          <button class="zw-author-btn" type="button" data-zw-author="顾声现场：长期拍摄社区音乐现场与排练幕后，坚持同期声收录，作品 41 支。">查看档案</button>
+        </article>
+        <article class="zw-author">
+          <div class="zw-author-ava" style="background:linear-gradient(145deg,#b5502f,#e8b996)">街</div>
+          <h3>街巷笔记</h3>
+          <div class="zw-author-field">在地文化 · 城市探索</div>
+          <p>用步行丈量街区，把消失中的店铺与习俗留在影像里。</p>
+          <div class="zw-author-num"><span>作品 <b>73</b></span><span>关注 <b>3.1 万</b></span></div>
+          <button class="zw-author-btn" type="button" data-zw-author="街巷笔记：城市步行记录者，长期跟踪老街区的店铺与节令习俗，作品 73 支。">查看档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像墙 + 故事 -->
+  <section class="zw-section zw-section-alt" id="zw-wall">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Gallery · 社区影像墙</span>
+          <h2>这一季被定格的瞬间</h2>
+          <p>来自紫藤家园sp 社区投稿的影像切片，尺寸与题材各不相同。</p>
+        </div>
+        <a class="zw-link-more" href="#zw-contact">上传我的作品</a>
+      </div>
+      <div class="zw-wall">
+        <div class="zw-wall-item zw-wall-lg">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Crect width='600' height='600' fill='%23f3e6d0'/%3E%3Ccircle cx='300' cy='250' r='120' fill='%23e8cf9c'/%3E%3Cpath d='M0 470 Q150 390 300 460 T600 450 v150 H0z' fill='%238a5a3c'/%3E%3Crect x='80' y='120' width='140' height='180' rx='8' fill='%23fdf8f0'/%3E%3Crect x='380' y='90' width='160' height='210' rx='8' fill='%23fdf8f0'/%3E%3Crect x='380' y='90' width='160' height='30' rx='8' fill='%23b5502f'/%3E%3C/svg%3E" alt="社区午后阳光下的院子影像">
+          <span>午后三点的院子</span>
+        </div>
+        <div class="zw-wall-item zw-wall-wide">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300'%3E%3Crect width='600' height='300' fill='%23dce9f7'/%3E%3Cpath d='M0 220 h600 v80 H0z' fill='%2378a3c9'/%3E%3Ccircle cx='480' cy='80' r='38' fill='%23fff3c9'/%3E%3Crect x='60' y='120' width='110' height='100' fill='%23fff'/%3E%3Crect x='200' y='90' width='130' height='130' fill='%23f4f8fc'/%3E%3Cpath d='M200 90 l65 -50 65 50' fill='%233d5a7d'/%3E%3C/svg%3E" alt="雨后社区道路与屋檐影像">
+          <span>雨后的低洼处</span>
+        </div>
+        <div class="zw-wall-item zw-wall-tall">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 600'%3E%3Crect width='300' height='600' fill='%23e8dcf6'/%3E%3Crect x='60' y='80' width='180' height='440' rx='10' fill='%23f7f0ff'/%3E%3Ccircle cx='150' cy='180' r='46' fill='%23b58ce0'/%3E%3Crect x='90' y='260' width='120' height='14' rx='7' fill='%23c9a9e8'/%3E%3Crect x='90' y='292' width='90' height='12' rx='6' fill='%23dcc8f3'/%3E%3Crect x='90' y='420' width='120' height='60' rx='8' fill='%23e8629c' opacity='.75'/%3E%3C/svg%3E" alt="社区公告栏与紫藤花影像">
+          <span>公告栏下的紫藤</span>
+        </div>
+        <div class="zw-wall-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23eaf7f0'/%3E%3Ccircle cx='200' cy='130' r='60' fill='%2399cfae'/%3E%3Ccircle cx='200' cy='130' r='40' fill='%23f7fff9'/%3E%3Cpath d='M0 230 Q100 190 200 225 T400 220 v80 H0z' fill='%233f7d5a'/%3E%3C/svg%3E" alt="社区共享菜园影像">
+          <span>共享菜园的第一批菜</span>
+        </div>
+        <div class="zw-wall-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23fff2e0'/%3E%3Crect x='60' y='100' width='280' height='140' rx='10' fill='%23fff' stroke='%23e8b996' stroke-width='3'/%3E%3Crect x='80' y='120' width='110' height='100' fill='%23f4d5b8'/%3E%3Crect x='210' y='130' width='110' height='12' rx='6' fill='%23e2cbb5'/%3E%3Crect x='210' y='158' width='90' height='12' rx='6' fill='%23e2cbb5'/%3E%3C/svg%3E" alt="居民手写菜谱影像">
+          <span>一张手写菜谱</span>
+        </div>
+        <div class="zw-wall-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23281f3a'/%3E%3Ccircle cx='200' cy='140' r='70' fill='%23f8e6a0' opacity='.85'/%3E%3Ccircle cx='200' cy='140' r='54' fill='%23281f3a'/%3E%3Crect x='0' y='230' width='400' height='70' fill='%233d2f5e'/%3E%3Ccircle cx='80' cy='80' r='3' fill='%23fff'/%3E%3Ccircle cx='320' cy='60' r='4' fill='%23fff'/%3E%3C/svg%3E" alt="社区夜间一角影像">
+          <span>熄灯之前</span>
+        </div>
+      </div>
+
+      <div class="zw-cols-2" style="margin-top:36px;">
+        <div class="zw-panel">
+          <h3>创作灵感与工具</h3>
+          <p class="zw-panel-sub">给正在准备的你，一些可以直接使用的切入点。</p>
+          <div class="zw-idea">
+            <span class="zw-idea-num">01</span>
+            <div><h4>从一个固定机位开始</h4><p>选择一个你每天都会路过的位置，连续拍七天，同一时间、同一角度。</p></div>
+          </div>
+          <div class="zw-idea">
+            <span class="zw-idea-num">02</span>
+            <div><h4>给画面找一个声音主角</h4><p>先录十分钟环境声，再决定镜头怎么剪，往往会得到不同的节奏。</p></div>
+          </div>
+          <div class="zw-idea">
+            <span class="zw-idea-num">03</span>
+            <div><h4>标题建议：具体优于概括</h4><p>「六点半浇水」比「我的园艺生活」更容易被同好找到。</p></div>
+          </div>
+          <div class="zw-idea">
+            <span class="zw-idea-num">04</span>
+            <div><h4>字幕规范</h4><p>平台提供统一字号与对比度建议，方便中老年观众清晰阅读。</p></div>
+          </div>
+        </div>
+        <div class="zw-panel">
+          <h3>本周社区榜单</h3>
+          <p class="zw-panel-sub">按互动与完播综合计算，每周一更新。</p>
+          <div class="zw-rank">
+            <span class="zw-rank-no">1</span>
+            <div class="zw-rank-body"><b>一锅汤的六个小时</b><span>林间灶台 · 日常记录</span></div>
+            <span class="zw-rank-hot">热度 98</span>
+          </div>
+          <div class="zw-rank">
+            <span class="zw-rank-no">2</span>
+            <div class="zw-rank-body"><b>在社区修了三十年自行车的老陈</b><span>慢访问 · 人物访谈</span></div>
+            <span class="zw-rank-hot">热度 94</span>
+          </div>
+          <div class="zw-rank">
+            <span class="zw-rank-no">3</span>
+            <div class="zw-rank-body"><b>老街区的年味：从腊月二十三开始</b><span>街巷笔记 · 在地文化</span></div>
+            <span class="zw-rank-hot">热度 91</span>
+          </div>
+          <div class="zw-rank">
+            <span class="zw-rank-no">4</span>
+            <div class="zw-rank-body"><b>小户型收纳：拆成四个可复用单元</b><span>沈家整理术 · 实用技巧</span></div>
+            <span class="zw-rank-hot">热度 87</span>
+          </div>
+          <div class="zw-rank">
+            <span class="zw-rank-no">5</span>
+            <div class="zw-rank-body"><b>把 4 小时素材剪成 14 分钟</b><span>剪辑台日志 · 创作幕后</span></div>
+            <span class="zw-rank-hot">热度 83</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 + 动态 -->
+  <section class="zw-section" id="zw-news">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Voices & Updates</span>
+          <h2>用户口碑与品牌动态</h2>
+          <p>来自社区的真实反馈，以及紫藤家园sp 的官方发布。</p>
+        </div>
+      </div>
+      <div class="zw-review-grid" style="margin-bottom:30px;">
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#e8a07c">王</span><div><b>王阿姨</b><span>居住 12 年 · 忠实用户</span></div></div>
+          <p>字大、声音清楚，我能自己找到想看的内容。最喜欢看别人家怎么做饭，看着心里踏实。</p>
+        </div>
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#3fae9c">小</span><div><b>小满</b><span>创作者 · 入驻 2 年</span></div></div>
+          <p>这里的评论是真的在讨论内容，而不是刷存在感。我的收纳系列能一直更新，靠的就是这些具体提问。</p>
+        </div>
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#5b3b8c">阿</span><div><b>阿哲</b><span>社区工作者</span></div></div>
+          <p>我们把社区活动记录交给紫藤家园sp 做留档，素材整理和版权说明都很规范，后续查资料很方便。</p>
+        </div>
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#b5502f">陈</span><div><b>陈先生</b><span>摄影爱好者</span></div></div>
+          <p>画质保留得比预期好，老片子修复后细节还能认出来。希望以后能开放更多家庭共享的观看方式。</p>
+        </div>
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#7ba7d9">周</span><div><b>周末不加班</b><span>新用户</span></div></div>
+          <p>搜索「楼道改造」直接跳到了相关专题，没有绕来绕去。界面朴素，但该有的都有。</p>
+        </div>
+        <div class="zw-review">
+          <div class="zw-review-user"><span class="zw-avatar" style="background:#c07aa8">李</span><div><b>李同学</b><span>学生 · 观众</span></div></div>
+          <p>看「会做饭的人」系列学到了怎么用有限调料做一餐，比很多教程实在。希望第三季快点来。</p>
+        </div>
+      </div>
+
+      <div class="zw-cols-2">
+        <div class="zw-panel">
+          <h3>品牌动态 · 官方发布</h3>
+          <p class="zw-panel-sub">持续运营中的平台更新与合作信息。</p>
+          <div class="zw-news-item">
+            <div class="zw-news-date"><b>11/18</b><span>2026</span></div>
+            <div class="zw-news-body"><b>《院落四季》第二季第 6 集上线</b><p>本集记录入冬前最后一次庭院整理，同步开放拍摄脚本文档下载。</p></div>
+          </div>
+          <div class="zw-news-item">
+            <div class="zw-news-date"><b>11/12</b><span>2026</span></div>
+            <div class="zw-news-body"><b>邻里共创计划新增 3 个合作社区</b><p>平台与三个社区签署影像共建协议，提供拍摄培训与设备借用。</p></div>
+          </div>
+          <div class="zw-news-item">
+            <div class="zw-news-date"><b>11/05</b><span>2026</span></div>
+            <div class="zw-news-body"><b>创作者成长体系 2.0 开放测试</b><p>新增作品诊断与版权说明模块，帮助创作者理解内容表现与权利边界。</p></div>
+          </div>
+          <div class="zw-news-item">
+            <div class="zw-news-date"><b>10/28</b><span>2026</span></div>
+            <div class="zw-news-body"><b>家庭影像修复公益项目启动报名</b><p>面向社区家庭，提供老照片与旧录像的整理建议与修复支持。</p></div>
+          </div>
+        </div>
+        <div class="zw-panel">
+          <h3>常见问题</h3>
+          <p class="zw-panel-sub">关于发布、版权与社区规范的高频问题。</p>
+          <div class="zw-faq-list">
+            <details open>
+              <summary>怎样在紫藤家园sp 发布作品？</summary>
+              <p>完成账号注册与实名信息登记后，可在「投稿」入口上传高清文件，填写标题、标签与内容说明。平台会在 48 小时内完成基础审核。</p>
+            </details>
+            <details>
+              <summary>平台如何保障原创与版权？</summary>
+              <p>所有作品发布时都会生成带署名的发布记录，并提供正版授权说明模板。引用他人素材需注明来源，平台支持权利人对疑似侵权内容发起核查。</p>
+            </details>
+            <details>
+              <summary>可以下载自己发布的作品吗？</summary>
+              <p>可以。创作者可随时下载自己的高清母版，并查看历史版本与发布状态。</p>
+            </details>
+            <details>
+              <summary>企业或机构如何参与合作？</summary>
+              <p>可通过页脚的联系方式提交合作意向，说明项目类型、周期与预期。我们会安排对应的内容策划人员沟通。</p>
+            </details>
+            <details>
+              <summary>社区内容有投稿主题限制吗？</summary>
+              <p>围绕真实生活、在地文化与实用经验的内容都欢迎。涉及未成年人画面时，请先取得监护人同意。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="zw-section" id="zw-contact">
+    <div class="zw-container">
+      <div class="zw-contact">
+        <div>
+          <h2>把你的家园，交给镜头</h2>
+          <p>无论你记录的是院子、楼道、厨房还是街角，紫藤家园sp 都愿意为它留一个位置。</p>
+          <p>投稿、合作、活动报名与内容建议，都可以直接联系我们。</p>
+          <div class="zw-contact-btns">
+            <button class="zw-btn zw-btn-accent" type="button" data-zw-open="submit">进入投稿通道</button>
+            <button class="zw-btn zw-btn-ghost" type="button" data-zw-open="feedback" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4);">反馈与建议</button>
+            <button class="zw-btn zw-btn-ghost" type="button" data-zw-open="contact" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4);">合作联系</button>
+          </div>
+        </div>
+        <dl class="zw-contact-info">
+          <div><dt>合作邮箱</dt><dd>coop@ziteng-home.sp</dd></div>
+          <div><dt>内容咨询</dt><dd>editor@ziteng-home.sp</dd></div>
+          <div><dt>社区热线</dt><dd>400-880-6633</dd></div>
+          <div><dt>办公时间</dt><dd>周一至周五 09:30–18:00</dd></div>
+          <div><dt>地址</dt><dd>紫藤家园社区影像中心 3 层</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 独立区块（帮助锚点） -->
+  <section class="zw-section zw-section-alt" id="zw-faq">
+    <div class="zw-container">
+      <div class="zw-section-head">
+        <div>
+          <span class="zw-kicker">Help · 帮助中心</span>
+          <h2>更多使用说明</h2>
+          <p>关于观看、账号与社区参与的补充说明。</p>
+        </div>
+      </div>
+      <div class="zw-faq-list">
+        <details>
+          <summary>如何获得更好的播放体验？</summary>
+          <p>平台会根据网络情况自动调整清晰度。你可以在播放器中手动选择高清或标清，并开启大字幕模式，方便在不同设备上观看。</p>
+        </details>
+        <details>
+          <summary>账号注册需要哪些信息？</summary>
+          <p>基础观看仅需手机号或邮箱注册。若要发布作品，需补充实名信息与联系方式，用于版权归属与内容审核沟通。</p>
+        </details>
+        <details>
+          <summary>投稿后多久能看到结果？</summary>
+          <p>常规审核为 48 小时内。遇到专题征集或活动集中投稿，可能延长至 5 个工作日，届时会在账号内通知。</p>
+        </details>
+        <details>
+          <summary>如何参加社区比赛与共创活动？</summary>
+          <p>在专题页点击「报名参与共创」并填写报名表即可。平台会按主题匹配编辑与现有创作者，提供拍摄建议与发布支持。</p>
+        </details>
+        <details>
+          <summary>内容被误判怎么办？</summary>
+          <p>可以在作品详情页发起申诉，附上素材来源与授权说明。人工复核通常在 3 个工作日内完成，并会同步复核结论。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="zw-footer">
+  <div class="zw-container">
+    <div class="zw-footer-grid">
+      <div>
+        <div class="zw-footer-brand">
+          <span class="zw-brand-mark">紫</span>
+          <span>
+            <span class="zw-brand-name" style="color:#fff;font-size:16px;">紫藤家园sp</span>
+            <span class="zw-brand-sub" style="color:#9a8bb8;">社区影像官方门户</span>
+          </span>
+        </div>
+        <p>紫藤家园sp 官方网站，专注社区生活影像的原创视频品牌平台。持续运营中，以真实、温暖、专业的内容生态服务创作者与家庭用户。</p>
+      </div>
+      <div>
+        <h4>内容入口</h4>
+        <ul>
+          <li><a href="#zw-focus">焦点影像</a></li>
+          <li><a href="#zw-videos">热门内容</a></li>
+          <li><a href="#zw-topics">社区专题</a></li>
+          <li><a href="#zw-wall">影像墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#zw-about">品牌故事</a></li>
+          <li><a href="#zw-authors">创作者矩阵</a></li>
+          <li><a href="#zw-news">企业动态</a></li>
+          <li><a href="#zw-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共建</h4>
+        <ul>
+          <li><a href="#zw-contact">投稿通道</a></li>
+          <li><a href="#zw-contact">合作联系</a></li>
+          <li><a href="#zw-topics">活动报名</a></li>
+          <li><a href="#zw-contact">反馈建议</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="zw-footer-bottom">
+      <span>© 2020–2026 紫藤家园sp 官方网站 · 版权所有 · 持续运营中</span>
+      <span>社区影像内容平台 · 内容备案号 沪ICP备 2026 0388 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="zw-top-btn" id="zwTopBtn" aria-label="回到顶部">↑</button>
+<div class="zw-toast" id="zwToast" role="status" aria-live="polite"></div>
+
+<div class="zw-modal-mask" id="zwModalMask">
+  <div class="zw-modal zw-modal-rel" role="dialog" aria-modal="true" aria-labelledby="zwModalTitle">
+    <button class="zw-modal-close" id="zwModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="zwModalTitle">投稿通道</h3>
+    <p class="zw-modal-sub" id="zwModalSub">请填写基础信息，编辑会在 3 个工作日内与你联系。</p>
+    <form id="zwModalForm">
+      <label for="zwFieldName">你的称呼</label>
+      <input id="zwFieldName" name="name" type="text" placeholder="例如：林间灶台" required>
+      <label for="zwFieldContact">联系方式</label>
+      <input id="zwFieldContact" name="contact" type="text" placeholder="邮箱或手机号" required>
+      <label for="zwFieldType">事项类型</label>
+      <select id="zwFieldType" name="type">
+        <option>作品投稿</option>
+        <option>专题报名</option>
+        <option>合作洽谈</option>
+        <option>反馈与建议</option>
+      </select>
+      <label for="zwFieldMsg">内容说明</label>
+      <textarea id="zwFieldMsg" name="msg" placeholder="简单描述作品主题、拍摄场景或合作诉求"></textarea>
+      <div class="zw-modal-actions">
+        <button class="zw-btn zw-btn-ghost zw-btn-sm" type="button" id="zwModalCancel">取消</button>
+        <button class="zw-btn zw-btn-main zw-btn-sm" type="submit">提交</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('zwToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('zw-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toast.classList.remove('zw-show');
+    }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('zwBurger');
+  var nav = document.getElementById('zwNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('zw-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '×' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 720){
+      nav.classList.remove('zw-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* 搜索提示 */
+  var searchForm = document.getElementById('zwSearchForm');
+  var searchInput = document.getElementById('zwSearchInput');
+  var searchTip = document.getElementById('zwSearchTip');
+  var searchData = ['院落四季','楼道改造','老陈访谈','家常菜记录','收纳方法','影像修复','邻里夜谈','社区音乐会'];
+  var tipTimer = null;
+
+  searchInput.addEventListener('input', function(){
+    var v = searchInput.value.trim();
+    if(!v){ searchTip.classList.remove('zw-show'); return; }
+    var hits = searchData.filter(function(item){
+      return item.indexOf(v) !== -1 || v.indexOf(item) !== -1;
+    });
+    if(hits.length){
+      searchTip.textContent = '为你找到 ' + hits.length + ' 条相关内容：' + hits.slice(0,3).join(' / ');
+    }else{
+      searchTip.textContent = '暂无完全匹配，展示与「' + v + '」相关的社区内容';
+    }
+    searchTip.classList.add('zw-show');
+    clearTimeout(tipTimer);
+    tipTimer = setTimeout(function(){
+      searchTip.classList.remove('zw-show');
+    }, 4000);
+  });
+
+  searchForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = searchInput.value.trim();
+    if(!v){
+      showToast('请输入关键词后再搜索');
+      return;
+    }
+    showToast('已按「' + v + '」为你筛选社区内容');
+    var grid = document.getElementById('zwVideoGrid');
+    var cards = grid.querySelectorAll('.zw-vcard');
+    var found = 0;
+    cards.forEach(function(card){
+      var text = card.textContent;
+      if(text.indexOf(v) !== -1){
+        card.style.display = '';
+        found++;
+      }else{
+        card.style.display = 'none';
+      }
+    });
+    if(!found){
+      cards.forEach(function(card){ card.style.display = ''; });
+      showToast('没有直接匹配的作品，已恢复全部内容');
+    }
+    document.getElementById('zw-videos').scrollIntoView({behavior:'smooth'});
+  });
+
+  /* 标签筛选 */
+  var filterRow = document.getElementById('zwFilterRow');
+  filterRow.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-zw-filter]');
+    if(!btn) return;
+    filterRow.querySelectorAll('.zw-chip').forEach(function(c){
+      c.classList.remove('zw-active');
+    });
+    btn.classList.add('zw-active');
+    var type = btn.getAttribute('data-zw-filter');
+    var grid = document.getElementById('zwVideoGrid');
+    grid.querySelectorAll('.zw-vcard').forEach(function(card){
+      if(type === 'all' || card.getAttribute('data-zw-tag') === type){
+        card.style.display = '';
+      }else{
+        card.style.display = 'none';
+      }
+    });
+  });
+
+  /* 点赞 / 收藏 / 分享 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-zw-like]');
+    if(likeBtn){
+      var span = likeBtn.querySelector('span');
+      var num = parseInt(span.textContent.replace(/,/g,''),10) || 0;
+      if(likeBtn.classList.contains('zw-liked')){
+        likeBtn.classList.remove('zw-liked');
+        likeBtn.firstChild.textContent = '♡ ';
+        num = Math.max(0, num - 1);
+      }else{
+        likeBtn.classList.add('zw-liked');
+        likeBtn.firstChild.textContent = '♥ ';
+        num = num + 1;
+      }
+      span.textContent = num.toLocaleString('en-US');
+      return;
+    }
+    var saveBtn = e.target.closest('[data-zw-save]');
+    if(saveBtn){
+      if(saveBtn.classList.contains('zw-saved')){
+        saveBtn.classList.remove('zw-saved');
+        saveBtn.textContent = '☆ 收藏';
+        showToast('已取消收藏');
+      }else{
+        saveBtn.classList.add('zw-saved');
+        saveBtn.textContent = '★ 已收藏';
+        showToast('已加入你的收藏夹');
+      }
+      return;
+    }
+    var shareBtn = e.target.closest('[data-zw-share]');
+    if(shareBtn){
+      var title = shareBtn.closest('.zw-vcard').querySelector('h3').textContent;
+      var link = '紫藤家园sp 作品《' + title + '》';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('作品信息已复制，可粘贴分享');
+        }).catch(function(){
+          showToast('分享信息：' + link);
+        });
+      }else{
+        showToast('分享信息：' + link);
+      }
+      return;
+    }
+    var authorBtn = e.target.closest('[data-zw-author]');
+    if(authorBtn){
+      showToast(authorBtn.getAttribute('data-zw-author'));
+    }
+  });
+
+  /* 弹窗 */
+  var mask = document.getElementById('zwModalMask');
+  var modalTitle = document.getElementById('zwModalTitle');
+  var modalSub = document.getElementById('zwModalSub');
+  var modalForm = document.getElementById('zwModalForm');
+  var modalMap = {
+    submit:['投稿通道','请填写基础信息，编辑会在 3 个工作日内与你联系。'],
+    feedback:['反馈与建议','我们重视每一条来自社区的意见，请尽量描述具体场景。'],
+    contact:['合作联系','请说明合作类型与预期周期，我们会安排对应人员对接。']
+  };
+
+  function openModal(key){
+    var cfg = modalMap[key] || modalMap.submit;
+    modalTitle.textContent = cfg[0];
+    modalSub.textContent = cfg[1];
+    mask.classList.add('zw-show');
+    var first = document.getElementById('zwFieldName');
+    if(first) setTimeout(function(){ first.focus(); }, 200);
+  }
+  function closeModal(){
+    mask.classList.remove('zw-show');
+  }
+
+  document.addEventListener('click', function(e){
+    var opener = e.target.closest('[data-zw-open]');
+    if(opener){
+      openModal(opener.getAttribute('data-zw-open'));
+    }
+  });
+  document.getElementById('zwModalClose').addEventListener('click', closeModal);
+  document.getElementById('zwModalCancel').addEventListener('click', closeModal);
+  mask.addEventListener('click', function(e){
+    if(e.target === mask) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+  modalForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('zwFieldName').value.trim();
+    if(!name){
+      showToast('请先填写你的称呼');
+      return;
+    }
+    closeModal();
+    showToast('提交成功，感谢你参与紫藤家园sp 社区共建');
+    modalForm.reset();
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('zwTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){
+      topBtn.classList.add('zw-show');
+    }else{
+      topBtn.classList.remove('zw-show');
+    }
+  });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+  </html>
